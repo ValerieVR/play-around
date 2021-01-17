@@ -19,7 +19,8 @@
                 required autocomplete="off"
                 oninvalid="this.setCustomValidity('Fill in a number between 1 and 22!')" 
                 oninput="setCustomValidity('')"><br><br>
-                <input type="submit" id="button" value="PLAY NOW">
+                <input type="submit" class="button" value="PLAY NOW"><br><br>
+				<input type="submit" class="button" value="RESET">
 			</form>
 		</main>
 	</div>
@@ -57,7 +58,7 @@
 			width: 100px;
 		}
 
-		p, #guess, #button {
+		p, #guess, .button {
 			font-family: Roboto;
 		}
 	</style>
