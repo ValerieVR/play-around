@@ -23,5 +23,43 @@
 			</form>
 		</main>
 	</div>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			margin-top: 150px;
+			background-color: #bbbfca;
+		}
+
+		#game-container {
+			background-color: #525d6d;
+			border-style: solid;
+			padding: 40px;
+		}
+
+		h1 {
+			margin-bottom: 0px;
+			margin-top: 0px;
+			font-family: Secular One, 'Times New Roman', Times, serif;
+		}
+
+		p {
+			margin-top: 0px;
+		}
+
+		#guess {
+			width: 100px;
+		}
+
+		p, #guess, #button {
+			font-family: Roboto;
+		}
+	</style>
 </body>
 </html>
