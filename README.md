@@ -7,7 +7,7 @@ The player has to submit how many times he would like to guess. If not, the play
 ![](images/GuessingGame.PNG)
 
 ## :facepunch: :raised_hand: :v: Rock Paper Scissors
-In construction ...
+Under construction ...
 
 ## :wrench: Tools
 - Visual Studio Code
