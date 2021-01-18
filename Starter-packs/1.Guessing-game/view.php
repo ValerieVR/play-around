@@ -15,9 +15,7 @@
 		<main>
 			<p>How many times would you like to guess?</p>
 			<form action="" method="POST">
-				<input type="text" id="maxGuesses" name="maxGuesses" required autocomplete="off"
-                oninvalid="this.setCustomValidity('Please, this is required to start the game!')" 
-                oninput="setCustomValidity('')"><br><br>
+				<input type="text" id="maxGuesses" name="maxGuesses" autocomplete="off"><br><br>
                 <input type="submit" class="button" name= "maxGuesses-bttn" value="START THE GAME">
 			</form>
 		</main>
