@@ -7,11 +7,8 @@ class GuessingGame
     public $messageToPlayer;
     public $numberOfGuesses = 0;
 
-    // TODO: set a default amount of max guesses
     public function __construct(int $maxGuesses = 3)
     {   
-        // We ask for the max guesses when someone creates a game
-        // Allowing your settings to be chosen like this, will bring a lot of flexibility
         $this->maxGuesses = $maxGuesses;
 
         if(!empty($_SESSION["secretNumber"])) {
@@ -25,17 +22,10 @@ class GuessingGame
 
     public function run()
     {   
-        // This function functions as your game "engine"
-        // It will run every time, check what needs to happen and run the according functions (or even create other classes)
-
-        // TODO: check if a secret number has been generated yet
-        // --> if not, generate one and store it in the session (so it can be kept when the user submits the form)
         if(empty($this->secretNumber)) {
             $this->generateSecretNumber();
         } 
             
-        // TODO: check if the player has submitted a guess
-        // --> if so, check if the player won (run the related function) or not (give a hint if the number was higher/lower or run playerLoses if all guesses are used).
         if (!empty($_POST["playerGuess"])) {
             $this->numberOfGuesses++;
             $_SESSION["numberOfGuesses"] = $this->numberOfGuesses;
@@ -54,7 +44,6 @@ class GuessingGame
             }
         }
         
-        // TODO as an extra: if a reset button was clicked, use the reset function to set up a new game
         if (!empty($_POST["reset-bttn"])) {
             $this->reset();
         }
@@ -70,35 +59,31 @@ class GuessingGame
   
     public function playerWins()
     {
-        // TODO: show a winner message (mention how many tries were needed)
         $this->messageToPlayer = "<strong>You won! You needed {$this->numberOfGuesses} guesses to find the secret number.</strong>";
         $this->reset();
     }
 
     public function playerLoses()
     {
-        // TODO: show a lost message (mention the secret number)
         $this->messageToPlayer = "<strong>You lost! The secret number is {$this->secretNumber}.</strong>";
         $this->reset();
     }
 
-    public function playerGuessHigher() {
-        //TODO: message if player's guess is higher
+    public function playerGuessHigher() 
+    {
         $this->messageToPlayer = "<strong>Your guess is higher than the secret number.</strong>";
     }
 
-    public function playerGuessLower() {
-        //TODO: message if player's guess is lower
+    public function playerGuessLower() 
+    {
         $this->messageToPlayer = "<strong>Your guess is lower than the secret number.</strong>";
     }
 
     public function reset()
     {
-        // TODO: Generate a new secret number and overwrite the previous one
         $this->generateSecretnumber();
         $this->numberOfGuesses = 0;
         $_SESSION["numberOfGuesses"] = 0;
 
     }
-
 }
