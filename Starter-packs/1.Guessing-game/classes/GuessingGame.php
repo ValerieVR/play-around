@@ -40,4 +40,11 @@ class GuessingGame
     {
         // TODO: Generate a new secret number and overwrite the previous one
     }
+
+    public function generateSecretNumber() 
+    {
+        $this->secretNumber = random_int(1,22);
+        $_SESSION["secretNumber"] = $this->secretNumber;
+    }
+    
 }

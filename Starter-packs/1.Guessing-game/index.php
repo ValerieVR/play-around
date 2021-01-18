@@ -61,6 +61,11 @@ if (isset($_POST["maxGuesses"])) {
     $_SESSION["maxGuesses"] = (int)$_POST["maxGuesses"];
 }
 
+if (!empty($_SESSION["maxGuesses"])) {
+    $game = new GuessingGame($_SESSION["maxGuesses"]);
+    
+}
+
 
 
 
