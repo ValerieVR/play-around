@@ -32,12 +32,16 @@ whatIsHappening();
 function hideForm() {
     if (isset($_POST["maxGuesses-bttn"])) {
         echo "style=display:none";
+    } elseif (isset($_POST["play-bttn"])) {
+        echo "style=display:none";
     }
 }
 
 // Function to display guessing game once the user has sumitted the amount of guesses
 function displayForm() {
     if (isset($_POST["maxGuesses-bttn"])) {
+        echo "style=display:block";
+    } elseif (isset($_POST["play-bttn"])) {
         echo "style=display:block";
     } else {
         echo "style=display:none";
@@ -55,8 +59,12 @@ if (isset($_POST["maxGuesses"])) {
     $_SESSION["maxGuesses"] = (int)$_POST["maxGuesses"];
     $game = new GuessingGame($_SESSION["maxGuesses"]);
     $game->generateSecretNum();
-    echo $game->secretNumber;
 }
+
+// if (isset($_POST["guess"])) {
+//     echo "<br><br><br>";
+//     echo $_POST["guess"];
+// }
 
 
 require 'view.php';
