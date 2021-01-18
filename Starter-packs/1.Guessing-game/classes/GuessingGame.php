@@ -17,6 +17,10 @@ class GuessingGame
         if(!empty($_SESSION["secretNumber"])) {
             $this->secretNumber = $_SESSION["secretNumber"];
         }
+
+        if (!empty($_SESSION["numberOfGuesses"])) {
+            $this->numberOfGuesses = $_SESSION["numberOfGuesses"];
+        }
     }
 
     public function run()
@@ -36,14 +40,23 @@ class GuessingGame
         // TODO as an extra: if a reset button was clicked, use the reset function to set up a new game
 
         if (!empty($_POST["playerGuess"])) {
+            $this->numberOfGuesses++;
+            $_SESSION["numberOfGuesses"] = $this->numberOfGuesses;
             if ($_POST["playerGuess"] == $this->secretNumber) {
                 $this->playerWins();
-            } elseif ($_POST["playerGuess"] > $this->secretNumber) {
+            } 
+            if ($_POST["playerGuess"] > $this->secretNumber) {
                 $this->playerGuessHigher();
-            } elseif ($_POST["playerGuess"] < $this->secretNumber) {
+            } 
+            if ($_POST["playerGuess"] < $this->secretNumber) {
                 $this->playerGuessLower();
             }
+            
+            if ($this->maxGuesses == $this->numberOfGuesses) {
+                $this->playerLoses();
+            }
         }
+
 
         
     }
@@ -57,13 +70,13 @@ class GuessingGame
     public function playerWins()
     {
         // TODO: show a winner message (mention how many tries were needed)
-        $this->messageToPlayer = "<strong>You won! You needed ... guesses to find the secret number.</strong>";
+        $this->messageToPlayer = "<strong>You won! You needed {$this->numberOfGuesses} guesses to find the secret number.</strong>";
     }
 
     public function playerLoses()
     {
         // TODO: show a lost message (mention the secret number)
-        $this->messageToPlayer = "<strong>You lost! The secret number is {$this->secretNumber}</strong>";
+        $this->messageToPlayer = "<strong>You lost! The secret number is {$this->secretNumber}.</strong>";
     }
 
     public function playerGuessHigher() {
