@@ -14,6 +14,10 @@ session_start();
 // Load you classes
 require_once 'classes/GuessingGame.php';
 
+//variables
+$game; // variable to define a new instance of the class GuessingGame
+
+
 
 function whatIsHappening() {
     echo '<h2>$_GET</h2>';
@@ -53,18 +57,12 @@ function displayForm() {
 // $game = new GuessingGame(3);
 // $game->run();
 
-
 // When the user submits his max guesses a new instance should be defined with the user's max guesses as input
 if (isset($_POST["maxGuesses"])) {
-    $_SESSION["maxGuesses"] = (int)$_POST["maxGuesses"];
-    $game = new GuessingGame($_SESSION["maxGuesses"]);
-    $game->generateSecretNum();
+    $_SESSION["maxGuesses"] = $_POST["maxGuesses"];
 }
 
-// if (isset($_POST["guess"])) {
-//     echo "<br><br><br>";
-//     echo $_POST["guess"];
-// }
+
 
 
 require 'view.php';

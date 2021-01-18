@@ -4,19 +4,11 @@ class GuessingGame
 {
     public $maxGuesses;
     public $secretNumber;
+    public $userGuess;
 
-    // TODO: set a default amount of max guesses
     public function __construct(int $maxGuesses = 3)
     {
-        // We ask for the max guesses when someone creates a game
-        // Allowing your settings to be chosen like this, will bring a lot of flexibility
         $this->maxGuesses = $maxGuesses;
-    }
-
-    public function generateSecretNum()
-    {
-        $_SESSION["secretNumber"] = rand(1,22);
-        $this->secretNumber = $_SESSION["secretNumber"];
     }
 
     public function run()
