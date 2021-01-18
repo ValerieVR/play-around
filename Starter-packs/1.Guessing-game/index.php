@@ -53,10 +53,16 @@ function displayForm() {
 }
 
 $game = new GuessingGame();
+
 if (!empty($_POST["maxGuesses"])) {
-    $game = new GuessingGame((int)$_POST["maxGuesses"]);
     $_SESSION["maxGuesses"] = $_POST["maxGuesses"];
 }
-$game->run();
 
+if (!empty($_SESSION["maxGuesses"])) {
+    $game = new GuessingGame((int)$_SESSION["maxGuesses"]);
+}
+
+$game->run();
+echo "<br><br><br>";
+echo $game->maxGuesses;
 require 'view.php';

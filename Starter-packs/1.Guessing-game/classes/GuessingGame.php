@@ -24,7 +24,7 @@ class GuessingGame
     }
 
     public function run()
-    {
+    {   
         // This function functions as your game "engine"
         // It will run every time, check what needs to happen and run the according functions (or even create other classes)
 
@@ -72,12 +72,14 @@ class GuessingGame
     {
         // TODO: show a winner message (mention how many tries were needed)
         $this->messageToPlayer = "<strong>You won! You needed {$this->numberOfGuesses} guesses to find the secret number.</strong>";
+        $this->reset();
     }
 
     public function playerLoses()
     {
         // TODO: show a lost message (mention the secret number)
         $this->messageToPlayer = "<strong>You lost! The secret number is {$this->secretNumber}.</strong>";
+        $this->reset();
     }
 
     public function playerGuessHigher() {
@@ -94,6 +96,8 @@ class GuessingGame
     {
         // TODO: Generate a new secret number and overwrite the previous one
         $this->generateSecretnumber();
+        $this->numberOfGuesses = 0;
+        $_SESSION["numberOfGuesses"] = 0;
 
     }
 
