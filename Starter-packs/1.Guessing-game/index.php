@@ -54,6 +54,8 @@ function displayForm() {
 if (isset($_POST["maxGuesses"])) {
     $_SESSION["maxGuesses"] = (int)$_POST["maxGuesses"];
     $game = new GuessingGame($_SESSION["maxGuesses"]);
+    $game->generateSecretNum();
+    echo $game->secretNumber;
 }
 
 

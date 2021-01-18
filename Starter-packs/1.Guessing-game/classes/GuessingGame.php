@@ -13,6 +13,12 @@ class GuessingGame
         $this->maxGuesses = $maxGuesses;
     }
 
+    public function generateSecretNum()
+    {
+        $_SESSION["secretNumber"] = rand(1,22);
+        $this->secretNumber = $_SESSION["secretNumber"];
+    }
+
     public function run()
     {
         // This function functions as your game "engine"
