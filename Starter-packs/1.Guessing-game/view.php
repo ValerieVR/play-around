@@ -8,7 +8,7 @@
 	<title>Casino royale - guessing game</title>
 </head>
 <body>
-<div id="maxGuess-container">
+<div id="maxGuess-container" <?php hideForm(); ?>>
 		<header>
 			<h1>GUESSING GAME</h1>
 		</header>
@@ -18,11 +18,11 @@
 				<input type="text" id="maxGuess" name="maxGuess" required autocomplete="off"
                 oninvalid="this.setCustomValidity('Please, this is required to start the game!')" 
                 oninput="setCustomValidity('')"><br><br>
-                <input type="submit" class="button" value="START THE GAME">
+                <input type="submit" class="button" name= "maxGuess-bttn" value="START THE GAME">
 			</form>
 		</main>
 	</div>
-	<div id="game-container">
+	<div id="game-container" <?php displayForm(); ?>>
 		<header>
 			<h1>GUESSING GAME</h1>
 		</header>
@@ -33,8 +33,8 @@
                 required autocomplete="off"
                 oninvalid="this.setCustomValidity('Fill in a number between 1 and 22!')" 
                 oninput="setCustomValidity('')"><br><br>
-                <input type="submit" class="button" value="PLAY NOW"><br><br>
-				<input type="submit" class="button" value="RESET GAME">
+                <input type="submit" class="button" name="play-bttn" value="PLAY NOW"><br><br>
+				<input type="submit" class="button" name="reset-bttn" value="RESET GAME">
 			</form>
 		</main>
 	</div>

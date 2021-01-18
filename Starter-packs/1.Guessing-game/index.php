@@ -14,6 +14,7 @@ session_start();
 // Load you classes
 require_once 'classes/GuessingGame.php';
 
+
 function whatIsHappening() {
     echo '<h2>$_GET</h2>';
     var_dump($_GET);
@@ -26,6 +27,22 @@ function whatIsHappening() {
 }
 
 whatIsHappening();
+
+// Function to hide form when user submits the amount of times he/she would like to guess
+function hideForm() {
+    if (isset($_POST["maxGuess-bttn"])) {
+        echo "style=display:none";
+    }
+}
+
+// Function to display guessing game once the user has sumitted the amount of guesses
+function displayForm() {
+    if (isset($_POST["maxGuess-bttn"])) {
+        echo "style=display:block";
+    } else {
+        echo "style=display:none";
+    }
+}
 
 // Start the game
 // As this game is rather simple, one class should be sufficient
