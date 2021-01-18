@@ -27,7 +27,7 @@
 		<main>
 			<p>Can you guess the secret number between 1 and 22?</p>
 			<form action="" method="POST">
-				<input type="number" id="guess" min=1 max=22 name="guess" placeholder="Your guess:" 
+				<input type="number" id="guess" min=1 max=22 name="playerGuess" placeholder="Your guess:" 
                 required autocomplete="off"
                 oninvalid="this.setCustomValidity('Fill in a number between 1 and 22!')" 
                 oninput="setCustomValidity('')"><br><br>

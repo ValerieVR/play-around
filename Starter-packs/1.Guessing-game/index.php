@@ -52,21 +52,17 @@ function displayForm() {
     }
 }
 
-// Start the game
-// As this game is rather simple, one class should be sufficient
-// $game = new GuessingGame();
-// $game->run();
 
 if (isset($_POST["maxGuesses"])) {
     if (empty($_POST["maxGuesses"])) {
         $game = new GuessingGame();
         $_SESSION["maxGuesses"] = $game->maxGuesses;
-        $game->run();
     } else {
         $game = new GuessingGame((int)$_POST["maxGuesses"]);
         $_SESSION["maxGuesses"] = $_POST["maxGuesses"];
-        $game->run();
     }
+
+    $game->run();
 }
 
 
