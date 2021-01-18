@@ -57,9 +57,8 @@ function displayForm() {
 // $game = new GuessingGame(3);
 // $game->run();
 
-// When the user submits his max guesses a new instance should be defined with the user's max guesses as input
 if (isset($_POST["maxGuesses"])) {
-    $_SESSION["maxGuesses"] = $_POST["maxGuesses"];
+    $_SESSION["maxGuesses"] = (int)$_POST["maxGuesses"];
 }
 
 
