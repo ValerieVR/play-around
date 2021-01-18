@@ -32,13 +32,10 @@ class GuessingGame
         // --> if not, generate one and store it in the session (so it can be kept when the user submits the form)
         if(empty($this->secretNumber)) {
             $this->generateSecretNumber();
-            $_SESSION["secretNumber"] = $this->secretNumber;
         } 
             
         // TODO: check if the player has submitted a guess
         // --> if so, check if the player won (run the related function) or not (give a hint if the number was higher/lower or run playerLoses if all guesses are used).
-        // TODO as an extra: if a reset button was clicked, use the reset function to set up a new game
-
         if (!empty($_POST["playerGuess"])) {
             $this->numberOfGuesses++;
             $_SESSION["numberOfGuesses"] = $this->numberOfGuesses;
@@ -56,14 +53,18 @@ class GuessingGame
                 $this->playerLoses();
             }
         }
-
-
+        
+        // TODO as an extra: if a reset button was clicked, use the reset function to set up a new game
+        if (!empty($_POST["reset-bttn"])) {
+            $this->reset();
+        }
         
     }
 
     public function generateSecretNumber() 
     {
         $this->secretNumber = random_int(1,22);
+        $_SESSION["secretNumber"] = $this->secretNumber;
     }
 
   
@@ -92,6 +93,8 @@ class GuessingGame
     public function reset()
     {
         // TODO: Generate a new secret number and overwrite the previous one
+        $this->generateSecretnumber();
+
     }
 
 }

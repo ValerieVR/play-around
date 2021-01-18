@@ -27,10 +27,7 @@
 		<main>
 			<p>Can you guess the secret number between 1 and 22?</p>
 			<form action="" method="POST">
-				<input type="number" id="guess" min=1 max=22 name="playerGuess" placeholder="Your guess:" 
-                required autocomplete="off"
-                oninvalid="this.setCustomValidity('Fill in a number between 1 and 22!')" 
-                oninput="setCustomValidity('')"><br><br>
+				<input type="number" id="guess" min=1 max=22 name="playerGuess" placeholder="Your gues ..." autocomplete="off"><br><br>
                 <input type="submit" class="button" name="play-bttn" value="PLAY NOW"><br><br>
 				<input type="submit" class="button" name="reset-bttn" value="RESET GAME"><br><br>
 				<p><?php echo $game->messageToPlayer; ?></p>
