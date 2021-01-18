@@ -8,17 +8,17 @@
 	<title>Casino royale - guessing game</title>
 </head>
 <body>
-<div id="maxGuess-container" <?php hideForm(); ?>>
+<div id="maxGuesses-container" <?php hideForm(); ?>>
 		<header>
 			<h1>GUESSING GAME</h1>
 		</header>
 		<main>
 			<p>How many times would you like to guess?</p>
 			<form action="" method="POST">
-				<input type="text" id="maxGuess" name="maxGuess" required autocomplete="off"
+				<input type="text" id="maxGuesses" name="maxGuesses" required autocomplete="off"
                 oninvalid="this.setCustomValidity('Please, this is required to start the game!')" 
                 oninput="setCustomValidity('')"><br><br>
-                <input type="submit" class="button" name= "maxGuess-bttn" value="START THE GAME">
+                <input type="submit" class="button" name= "maxGuesses-bttn" value="START THE GAME">
 			</form>
 		</main>
 	</div>
@@ -55,14 +55,14 @@
 			background-color: #bbbfca;
 		}
 
-		#game-container, #maxGuess-container {
+		#game-container, #maxGuesses-container {
 			background-color: #525d6d;
 			border-style: solid;
 			padding: 40px;
 			width: 450px;
 		}
 
-		#maxGuess-container {
+		#maxGuesses-container {
 			background-color: #eb596e;
 		}
 
@@ -76,7 +76,7 @@
 			margin-top: 0px;
 		}
 
-		#maxGuess {
+		#maxGuesses {
 			width: 50px;
 		}
 

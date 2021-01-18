@@ -30,14 +30,14 @@ whatIsHappening();
 
 // Function to hide form when user submits the amount of times he/she would like to guess
 function hideForm() {
-    if (isset($_POST["maxGuess-bttn"])) {
+    if (isset($_POST["maxGuesses-bttn"])) {
         echo "style=display:none";
     }
 }
 
 // Function to display guessing game once the user has sumitted the amount of guesses
 function displayForm() {
-    if (isset($_POST["maxGuess-bttn"])) {
+    if (isset($_POST["maxGuesses-bttn"])) {
         echo "style=display:block";
     } else {
         echo "style=display:none";
@@ -46,7 +46,15 @@ function displayForm() {
 
 // Start the game
 // As this game is rather simple, one class should be sufficient
-$game = new GuessingGame(3);
-$game->run();
+// $game = new GuessingGame(3);
+// $game->run();
+
+
+// When the user submits his max guesses a new instance should be defined with the user's max guesses as input
+if (isset($_POST["maxGuesses"])) {
+    $_SESSION["maxGuesses"] = (int)$_POST["maxGuesses"];
+    $game = new GuessingGame($_SESSION["maxGuesses"]);
+}
+
 
 require 'view.php';
