@@ -32,7 +32,8 @@
                 oninvalid="this.setCustomValidity('Fill in a number between 1 and 22!')" 
                 oninput="setCustomValidity('')"><br><br>
                 <input type="submit" class="button" name="play-bttn" value="PLAY NOW"><br><br>
-				<input type="submit" class="button" name="reset-bttn" value="RESET GAME">
+				<input type="submit" class="button" name="reset-bttn" value="RESET GAME"><br><br>
+				<p><?php echo $game->messageToPlayer; ?></p>
 			</form>
 		</main>
 	</div>
