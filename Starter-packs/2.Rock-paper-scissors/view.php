@@ -17,22 +17,24 @@
 			<div class="player">
 				<p>YOU</p>
 				<img src="../../images/start-left.PNG" alt="rock">
+				<p>0</p>
 			</div>
 			<div class="result">
-				<p>LET's PLAY!</p>
+				<p>LET'S PLAY!</p>
 			</div>
 			<div class="opponent">
 				<p>OPPONENT</p>
 				<img src="../../images/start-right.PNG" alt="rock">
+				<p>0</p>
 			</div>
 		</div>
 		<div class="RPS-container">
-			<button type="submit" name="rock">ROCK</button>
-			<button type="submit" name="paper">PAPER</button>
-			<button type="submit" name="scissors">SCISSORS</button>
+			<button id="rock" type="submit" name="rock">ROCK</button>
+			<button id="paper" type="submit" name="paper">PAPER</button>
+			<button id="scissors" type="submit" name="scissors">SCISSORS</button>
 		</div>
 		<div class="reset-container">
-			<button type="submit" name="reset">PLAY AGAIN</button>
+			<button id="reset" type="submit" name="reset">PLAY AGAIN</button>
 		</div>
 	</main>
 </body>
