@@ -29,12 +29,16 @@
 			</div>
 		</div>
 		<div class="RPS-container">
-			<button id="rock" type="submit" name="rock">ROCK</button>
-			<button id="paper" type="submit" name="paper">PAPER</button>
-			<button id="scissors" type="submit" name="scissors">SCISSORS</button>
+			<form action="" method="post">
+				<button id="rock" type="submit" name="rock">ROCK</button>
+				<button id="paper" type="submit" name="paper">PAPER</button>
+				<button id="scissors" type="submit" name="scissors">SCISSORS</button>
+			</form>
 		</div>
 		<div class="reset-container">
-			<button id="reset" type="submit" name="reset">PLAY AGAIN</button>
+			<form action="" method="post">
+				<button id="reset" type="submit" name="reset">PLAY AGAIN</button>
+			</form>
 		</div>
 	</main>
 </body>
