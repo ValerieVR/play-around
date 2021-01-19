@@ -9,4 +9,17 @@
 </head>
 <body>
 </body>
+<style>
+	* {
+		box-sizing: border-box;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	body {
+		background-color: #1B48C5;
+		height: 100vh;
+		width: 100vw;
+	}
+</style>
 </html>
