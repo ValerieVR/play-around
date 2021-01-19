@@ -47,7 +47,7 @@
 			align-items: center;
 			justify-content: center;
 			text-align: center;
-			margin-top: 150px;
+			height: 100vh;
 			background-color: #bbbfca;
 		}
 
