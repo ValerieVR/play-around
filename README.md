@@ -9,6 +9,9 @@ The player has to submit how many times he would like to guess. If not, the play
 ## :facepunch: :raised_hand: :v: Rock Paper Scissors
 Under construction ...
 
+## :spades: Blackjack
+Under construction ...
+
 ## :wrench: Tools
 - Visual Studio Code
 - PHP
