@@ -5,6 +5,7 @@
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
 	<title>Casino royale - guessing game</title>
 </head>
 <body>
@@ -34,55 +35,5 @@
 			</form>
 		</main>
 	</div>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-		* {
-			box-sizing: border-box;
-		}
-
-		body {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			height: 100vh;
-			background-color: #bbbfca;
-		}
-
-		#game-container, #maxGuesses-container {
-			background-color: #525d6d;
-			border-style: solid;
-			padding: 40px;
-			width: 450px;
-		}
-
-		#maxGuesses-container {
-			background-color: #eb596e;
-		}
-
-		h1 {
-			margin-bottom: 0px;
-			margin-top: 0px;
-			font-family: Secular One, 'Times New Roman', Times, serif;
-		}
-
-		p {
-			margin-top: 0px;
-		}
-
-		#maxGuesses {
-			width: 50px;
-		}
-
-		#guess {
-			width: 100px;
-		}
-
-		p, #guess, .button {
-			font-family: Roboto;
-		}
-	</style>
 </body>
 </html>
