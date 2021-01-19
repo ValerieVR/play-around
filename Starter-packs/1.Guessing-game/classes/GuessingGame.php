@@ -27,14 +27,18 @@ class GuessingGame
         } 
             
         if (!empty($_POST["playerGuess"])) {
+
             $this->numberOfGuesses++;
             $_SESSION["numberOfGuesses"] = $this->numberOfGuesses;
+
             if ($_POST["playerGuess"] == $this->secretNumber) {
                 $this->playerWins();
             } 
+
             if ($_POST["playerGuess"] > $this->secretNumber) {
                 $this->playerGuessHigher();
             } 
+
             if ($_POST["playerGuess"] < $this->secretNumber) {
                 $this->playerGuessLower();
             }
@@ -47,7 +51,6 @@ class GuessingGame
         if (!empty($_POST["reset-bttn"])) {
             $this->reset();
         }
-        
     }
 
     public function generateSecretNumber() 
@@ -84,6 +87,5 @@ class GuessingGame
         $this->generateSecretnumber();
         $this->numberOfGuesses = 0;
         $_SESSION["numberOfGuesses"] = 0;
-
     }
 }
