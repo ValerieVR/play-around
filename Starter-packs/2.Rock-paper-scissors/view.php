@@ -20,7 +20,8 @@
 				<p>0</p>
 			</div>
 			<div class="result">
-				<p>LET'S PLAY!</p>
+				<p id="result-message">YOU WON!</p>
+				<p>PAPER WRAPS ROCK</p>
 			</div>
 			<div class="opponent">
 				<p>OPPONENT</p>
@@ -28,18 +29,16 @@
 				<p>0</p>
 			</div>
 		</div>
-		<div class="RPS-container">
-			<form action="" method="post">
+		<form action="" method="post">
+			<div class="RPS-container">
 				<button id="rock" type="submit" name="rock">ROCK</button>
 				<button id="paper" type="submit" name="paper">PAPER</button>
 				<button id="scissors" type="submit" name="scissors">SCISSORS</button>
-			</form>
-		</div>
-		<div class="reset-container">
-			<form action="" method="post">
+			</div>
+			<div class="reset-container">
 				<button id="reset" type="submit" name="reset">PLAY AGAIN</button>
-			</form>
-		</div>
+			</div>
+		</form>
 	</main>
 </body>
 </html>
