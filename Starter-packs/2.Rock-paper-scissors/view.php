@@ -20,12 +20,12 @@
 				<p>0</p>
 			</div>
 			<div class="result">
-				<p id="result-message">YOU WON!!</p>
-				<p>PAPER WRAPS ROCK</p>
+				<p id="result-message"><?php $game->announceWinner(); ?></p>
+				<p><?php $game->explainOutcome(); ?></p>
 			</div>
 			<div class="opponent">
 				<p>OPPONENT</p>
-				<img src=<?php $game->displayOpponentChoice(); ?> alt="rock">
+				<img src=<?php $game->displayOpponentChoice();?> alt="rock">
 				<p>0</p>
 			</div>
 		</div>
