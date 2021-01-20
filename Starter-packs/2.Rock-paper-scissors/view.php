@@ -36,7 +36,7 @@
 				<button id="scissors" type="submit" name="scissors">SCISSORS</button>
 			</div>
 			<div class="reset-container">
-				<button id="reset" type="submit" name="reset">PLAY AGAIN</button>
+				<button id="reset" type="submit" name="reset" <?php PlayAgainBttn::displayBttn(); ?>>PLAY AGAIN</button>
 			</div>
 		</form>
 	</main>

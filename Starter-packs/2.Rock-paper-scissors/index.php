@@ -13,6 +13,8 @@ session_start();
 
 // Load your classes
 require_once 'classes/RockPaperScissors.php';
+require_once 'classes/PlayAgainBttn.php';
+
 
 function whatIsHappening() {
     echo '<h2>$_GET</h2>';
