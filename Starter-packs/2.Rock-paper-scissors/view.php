@@ -16,7 +16,7 @@
 		<div class="result-container">
 			<div class="player">
 				<p>YOU</p>
-				<img src= <?php $game->displayPlayerChoice(); ?> alt="rock">
+				<img src=<?php $game->displayPlayerChoice(); ?> alt="rock">
 				<p>0</p>
 			</div>
 			<div class="result">
@@ -25,7 +25,7 @@
 			</div>
 			<div class="opponent">
 				<p>OPPONENT</p>
-				<img src="../../images/start-right.PNG" alt="rock">
+				<img src=<?php $game->displayOpponentChoice(); ?> alt="rock">
 				<p>0</p>
 			</div>
 		</div>
