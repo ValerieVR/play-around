@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 session_start();
 
 // Load your classes
-// require_once 'classes/RockPaperScissors.php.php';
+require_once 'classes/RockPaperScissors.php';
 
 function whatIsHappening() {
     echo '<h2>$_GET</h2>';
