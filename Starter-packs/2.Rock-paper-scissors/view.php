@@ -20,7 +20,7 @@
 				<p>0</p>
 			</div>
 			<div class="result">
-				<p id="result-message">YOU WON!</p>
+				<p id="result-message">YOU WON!!</p>
 				<p>PAPER WRAPS ROCK</p>
 			</div>
 			<div class="opponent">

@@ -8,7 +8,10 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-// Load you classes
+// Open session
+session_start();
+
+// Load your classes
 // require_once 'classes/RockPaperScissors.php.php';
 
 function whatIsHappening() {
@@ -21,7 +24,7 @@ function whatIsHappening() {
     echo '<h2>$_SESSION</h2>';
     var_dump($_SESSION);
 }
-// whatIsHappening();
+whatIsHappening();
 
 // Start the game
 // $game = new RockPaperScissors();
