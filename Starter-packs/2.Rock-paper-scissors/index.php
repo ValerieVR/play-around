@@ -29,7 +29,9 @@ function whatIsHappening() {
 whatIsHappening();
 
 // Start the game
-// $game = new RockPaperScissors();
-// $game->run();
+$game = new RockPaperScissors();
+echo "<br><br><br>";
+$game->run();
+
 
 require 'view.php';

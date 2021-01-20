@@ -16,7 +16,7 @@
 		<div class="result-container">
 			<div class="player">
 				<p>YOU</p>
-				<img src="../../images/start-left.PNG" alt="rock">
+				<img src= <?php $game->displayPlayerChoice(); ?> alt="rock">
 				<p>0</p>
 			</div>
 			<div class="result">
@@ -31,9 +31,9 @@
 		</div>
 		<form action="" method="post">
 			<div class="RPS-container">
-				<button id="rock" type="submit" name="rock">ROCK</button>
-				<button id="paper" type="submit" name="paper">PAPER</button>
-				<button id="scissors" type="submit" name="scissors">SCISSORS</button>
+				<input id="rock" type="submit" name="rock" value="ROCK">
+				<input id="paper" type="submit" name="paper" value="PAPER">
+				<input id="scissors" type="submit" name="scissors" value="SCISSORS">
 			</div>
 			<div class="reset-container">
 				<button id="reset" type="submit" name="reset" <?php PlayAgainBttn::displayBttn(); ?>>PLAY AGAIN</button>
