@@ -38,6 +38,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 400px;
+    height: 320px;
 }
 
 .result {
@@ -46,6 +47,8 @@ header {
     justify-content: center;
     align-items: center;
     width: 350px;
+    height: 320px;
+    text-align: center;
 }
 
 .RPS-container {

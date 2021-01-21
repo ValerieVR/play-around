@@ -26,9 +26,10 @@ function whatIsHappening() {
     echo '<h2>$_SESSION</h2>';
     var_dump($_SESSION);
 }
-whatIsHappening();
+// whatIsHappening();
 
 // Start the game
 $game = new RockPaperScissors();
+$game->run();
 
 require 'view.php';

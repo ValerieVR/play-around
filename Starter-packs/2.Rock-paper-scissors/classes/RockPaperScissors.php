@@ -2,10 +2,16 @@
  class RockPaperScissors {
 
     public $randomNumber;
+    public $score = 0;
+    public $rounds = 0;
 
     public function __construct() {
         if (!empty(isset($_POST["rock"])) || !empty(isset($_POST["paper"])) || !empty(isset($_POST["scissors"]))) {
             $this->generateRandomNumber();
+        }
+
+        if(!empty($_SESSION)) {
+            $this->rounds = $_SESSION["rounds"];
         }
     }
     
@@ -15,6 +21,18 @@
 
     public function run() {
         
+        if (isset($_POST["rock"])){
+            $this->rounds++;
+            $_SESSION["rounds"] = $this->rounds;
+        } elseif (isset($_POST["paper"])) {
+            $this->rounds++;
+            $_SESSION["rounds"] = $this->rounds;
+        } elseif ((isset($_POST["scissors"]))) {
+            $this->rounds++;
+            $_SESSION["rounds"] = $this->rounds;
+        }
+        echo "<br><br><br>";
+        echo $this->rounds;
     }
 
     public function announceWinner() {
@@ -64,7 +82,7 @@
     public function explainOutcome() {
         switch (true) {
             case (empty($_POST["rock"]) && empty($_POST["paper"]) && empty($_POST["scissors"])):
-                echo "";
+                echo "BEAT YOUR OPPONENT IN 10 ROUNDS";
                 break;
 
             case ($this->randomNumber == 1 && isset($_POST["rock"])):
@@ -129,4 +147,13 @@
         }
     }
 
+    public function playAgainBttn() {
+        if($this->rounds == 10) {
+            echo "style=display:block";
+            $this->rounds = 0;
+            $_SESSION["rounds"] = 0;
+        } else {
+            echo "style=display:none";
+        }
+    }
  }

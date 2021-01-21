@@ -31,12 +31,12 @@
 		</div>
 		<form action="" method="post">
 			<div class="RPS-container">
-				<input id="rock" type="submit" name="rock" value="ROCK">
+				<input id="rock" type="submit" name="rock" value="ROCK"> 
 				<input id="paper" type="submit" name="paper" value="PAPER">
 				<input id="scissors" type="submit" name="scissors" value="SCISSORS">
 			</div>
 			<div class="reset-container">
-				<button id="reset" type="submit" name="reset" <?php PlayAgainBttn::displayBttn(); ?>>PLAY AGAIN</button>
+				<button id="reset" type="submit" name="reset" <?php $game->playAgainBttn(); ?>>PLAY AGAIN</button>
 			</div>
 		</form>
 	</main>
