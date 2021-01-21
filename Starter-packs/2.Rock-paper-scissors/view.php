@@ -17,7 +17,7 @@
 			<div class="player">
 				<p>YOU</p>
 				<img src=<?php $game->displayPlayerChoice(); ?> alt="rock">
-				<p>0</p>
+				<p><?php $game->displayPlayerScore(); ?></p>
 			</div>
 			<div class="result">
 				<p id="result-message"><?php $game->announceWinner(); ?></p>
@@ -27,7 +27,7 @@
 			<div class="opponent">
 				<p>OPPONENT</p>
 				<img src=<?php $game->displayOpponentChoice();?> alt="rock">
-				<p>0</p>
+				<p><?php $game->displayOpponentScore(); ?></p>
 			</div>
 		</div>
 		<form action="" method="post">
