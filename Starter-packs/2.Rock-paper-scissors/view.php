@@ -22,6 +22,7 @@
 			<div class="result">
 				<p id="result-message"><?php $game->announceWinner(); ?></p>
 				<p><?php $game->explainOutcome(); ?></p>
+				<p><?php $game->displayRounds(); ?></p>
 			</div>
 			<div class="opponent">
 				<p>OPPONENT</p>

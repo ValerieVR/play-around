@@ -2,7 +2,8 @@
  class RockPaperScissors {
 
     public $randomNumber;
-    public $score = 0;
+    public $playerScore = 0;
+    public $opponentScore = 0;
     public $rounds = 0;
 
     public function __construct() {
@@ -31,14 +32,16 @@
             $this->rounds++;
             $_SESSION["rounds"] = $this->rounds;
         }
-        echo "<br><br><br>";
-        echo $this->rounds;
     }
 
     public function announceWinner() {
         switch (true) {
             case (empty($_POST["rock"]) && empty($_POST["paper"]) && empty($_POST["scissors"])):
                 echo "LET'S PLAY";
+                break;
+            
+            case ($this->rounds == 11):
+                echo "GAME OVER!";
                 break;
 
             case ($this->randomNumber == 1 && isset($_POST["rock"])):
@@ -84,6 +87,10 @@
             case (empty($_POST["rock"]) && empty($_POST["paper"]) && empty($_POST["scissors"])):
                 echo "BEAT YOUR OPPONENT IN 10 ROUNDS";
                 break;
+            
+            case ($this->rounds == 11):
+                echo "";
+                break;
 
             case ($this->randomNumber == 1 && isset($_POST["rock"])):
                 echo "";
@@ -126,6 +133,8 @@
     public function displayPlayerChoice() {
         if (empty($_POST["rock"]) && empty($_POST["paper"]) && empty($_POST["scissors"])) {
             echo "../../images/start-left.PNG";
+        } elseif ($this->rounds == 11) {
+            echo "../../images/start-left.PNG";
         } elseif (isset($_POST["rock"])) {
             echo "../../images/rock-left.PNG";
         } elseif (isset($_POST["paper"])) {
@@ -138,6 +147,8 @@
     public function displayOpponentChoice() {
         if (empty($_POST["rock"]) && empty($_POST["paper"]) && empty($_POST["scissors"])) {
             echo "../../images/start-right.PNG";
+        } elseif ($this->rounds == 11) {
+            echo "../../images/start-right.PNG";
         } elseif ($this->randomNumber == 1) {
             echo "../../images/rock-right.PNG";
         } elseif ($this->randomNumber == 2) {
@@ -148,7 +159,7 @@
     }
 
     public function playAgainBttn() {
-        if($this->rounds == 10) {
+        if($this->rounds == 11) {
             echo "style=display:block";
             $this->rounds = 0;
             $_SESSION["rounds"] = 0;
@@ -156,4 +167,15 @@
             echo "style=display:none";
         }
     }
+
+    public function displayRounds() {
+        if (empty($_POST["rock"]) && empty($_POST["paper"]) && empty($_POST["scissors"])) {
+            echo "";
+        } elseif ($this->rounds == 11) {
+            echo "";
+        }else {
+            echo "ROUND {$this->rounds}";
+        }
+    }
+
  }
