@@ -9,7 +9,7 @@ The player has to submit how many times he would like to guess. If not, the play
 ## :facepunch: :raised_hand: :v: Rock Paper Scissors
 The classic Rock Paper Scissors game. The player has to beat the computer in 10 rounds. The score will be kept during the game. There is a custom message shown depending on the outcome.
 
-![](images/RockPaperScissors.PNG)
+![](images/RockPaperScissors.png)
 
 
 ## :spades: Blackjack
